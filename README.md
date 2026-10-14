@@ -44,6 +44,21 @@ python -m guitar_maker_tools
 
 Select **Quit**, press `Q`, or use `Ctrl+C` to close the application.
 
+## Screenshots
+
+### Fret calculation
+
+The fret calculator displays theoretical positions, inter-fret spacing, and
+residual string length for the selected scale.
+
+![Fret calculator showing a 647.7 mm scale and 14 calculated frets](docs/images/fret-calculator.svg)
+
+### Inverse scale calculation
+
+The inverse calculator derives a nominal scale from a known fret position.
+
+![Inverse scale calculator deriving a 647.700 mm scale from the 12th fret](docs/images/inverse-scale-calculator.svg)
+
 ## Using the application
 
 ### Calculate fret positions

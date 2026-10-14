@@ -32,4 +32,6 @@ Questo documento rappresenta lo stato effettivo della roadmap della V1.
 - Rilasciata la versione iniziale 1.0.0 e aggiunto `CHANGELOG.md`.
 - Aggiunto `.gitignore` per artefatti locali Python e aggiornato il README con
   i riferimenti alle risorse del progetto.
+- Aggiunte al README schermate dell'applicazione per calcolo tasti e calcolo
+  inverso.
 - Verifica completata: `pytest -q` — 24 test superati.
