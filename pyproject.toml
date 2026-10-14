@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "guitar-maker-tools"
+version = "1.0.0"
+description = "Terminal tools for guitar makers"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "textual>=0.56,<1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pytest-asyncio>=0.23",
+]
+
+[project.scripts]
+guitar-maker-tools = "guitar_maker_tools.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app/guitar_maker_tools"]
+
+[tool.pytest.ini_options]
+pythonpath = ["app"]
+testpaths = ["tests"]
