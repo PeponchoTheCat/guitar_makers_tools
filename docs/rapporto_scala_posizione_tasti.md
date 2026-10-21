@@ -158,6 +158,18 @@ La compensazione riguarda il punto di appoggio al ponte e non cambia la formula 
 
 Per tracciare una tastiera, non è consigliabile accumulare le distanze tra tasti una dopo l'altra: un piccolo errore su ogni intervallo può sommarsi lungo il manico. È preferibile calcolare ogni posizione a partire dallo stesso riferimento del capotasto, oppure usare una dima o una procedura di misura precisa. In un lavoro di liuteria, anche la precisione del taglio delle cave e la larghezza effettiva della lama sono importanti.
 
+### Precisione numerica del calcolo
+
+L'applicazione mantiene i valori `Decimal` in un contesto di calcolo di 36
+cifre significative e calcola ogni quota dal riferimento comune del
+capotasto. Questo controlla l'errore numerico, ma non rende esatte in senso
+matematico le potenze frazionarie della formula, come \(2^{n/12}\): salvo i
+casi rappresentabili esattamente, il loro valore deve essere arrotondato a un
+numero finito di cifre. Le tre cifre decimali mostrate ed esportate sono un
+ulteriore arrotondamento di presentazione; non definiscono una tolleranza di
+costruzione, che va scelta in base al metodo di lavorazione e verificata
+metrologicamente.
+
 ## 8. Formula inversa: ricavare la scala da una posizione nota
 
 Se si conosce la distanza \(d_n\) del tasto \(n\) dal capotasto e si vuole ricavare la lunghezza teorica della scala, si può riordinare la formula:

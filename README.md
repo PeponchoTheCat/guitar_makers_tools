@@ -81,6 +81,15 @@ calculated from the common nut reference, not by adding displayed spacings.
 The 12th-fret row is highlighted in yellow and the 14th-fret row in magenta
 for faster visual reference.
 
+### Numerical precision
+
+The calculation engine retains `Decimal` values in a 36-significant-digit
+calculation context. Equal temperament requires fractional powers such as
+`2^(n/12)`; except where the result is exactly representable, these values are
+rounded within that finite calculation context. The three decimal places shown
+in the application and exports are a separate presentation rounding, not a
+claim of absolute mathematical precision or a construction tolerance.
+
 The preset menu includes common Fender, Gibson, Martin, Taylor, classical, and
 short-scale dimensions. Martin presets include 25.4 in and 24.9 in; Taylor
 presets include the standard 25.5 in scale and the GS Mini 23.5 in scale.

@@ -68,8 +68,13 @@ generati risultati o file parziali.
 - `__main__.py`: comando di avvio.
 
 Il dominio non dipende da Textual. La precisione numerica usa `Decimal`;
-l'arrotondamento a tre decimali è applicato alla tabella e a tutti i formati
-di export.
+il contesto di calcolo usa 36 cifre significative. Le potenze frazionarie
+necessarie al temperamento equabile, come `2^(n/12)`, non sono in generale
+rappresentabili esattamente in un numero finito di cifre decimali e vengono
+quindi arrotondate nel contesto di calcolo. L'arrotondamento a tre decimali
+applicato alla tabella e a tutti i formati di export è separato dalla
+precisione interna: esprime il formato di presentazione, non una precisione
+matematica assoluta né una tolleranza costruttiva.
 
 ## Criteri di accettazione
 
